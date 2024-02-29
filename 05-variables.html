@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Variables</title>
+  <link rel="stylesheet" href="05-variables.css">
+</head>
+<body>
+<h1 class="card-header">Card quantity</h1>
+
+<!-- When button is clicked, it will display cart quantity on console -->
+<button class="card-quantity-button"onclick="
+console.log(`Cart quantity: ${cartQuantity}`)
+">Show quantity</button>
+
+<!-- When button is clicked, it will add one to cart and display it on console -->
+<button class="add-card-button" onclick="
+cartQuantity = cartQuantity + 1;
+console.log(`Cart quantity: ${cartQuantity}`)
+">Add to card</button>
+
+<!-- When button is clicked, it will add two items to cart and display it on console -->
+<button class="plus-two-button" onclick="
+cartQuantity += 2;
+console.log(`Cart quantity: ${cartQuantity}`)
+">+2</button>
+
+<!-- When button is clicked, it will add three items to cart and display it on console -->
+<button class="plus-three-button" onclick="
+cartQuantity += 3;
+console.log(`Cart quantity: ${cartQuantity}`)
+">+3</button>
+
+<!-- When button is clicked, it will reset cart and display it on console -->
+<button class="reset-card-button" onclick="
+cartQuantity = cartQuantity = 0;
+console.log(`Cart was reset!`)
+">Reset Card</button>
+
+<script src="05-variables.js"></script>
+</body>
+</html>
