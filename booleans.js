@@ -1,86 +1,103 @@
-// Booleans and If statements
-
-// true -> first boolean value
-// false -> second boolean value
-// == -> converts values to the same value\
-// ===
-// && -> logical operator: 'and'
-// || -> logical operator: 'or'
-// ! -> logical operator: 'not'
-
-// Practical example of boolean and if statements
-
-let age = 10;
-let drivingAge = 18;
+console.log(3 < 6);
+// console.log('five' = 5);
+console.log('five' == 5);
+console.log('five' === 'five');
 
 
-if (age > drivingAge) {
-  document.write("You are old enough to drive or posses a car!");
+
+if (3 >= 4) {
+  console.log('200');
 } else {
-  document.write("You are not old enough to drive or posses a car!");
+  console.log('404');
 }
+// Driving age checker
+let ageDrive = 20;
+
+if (ageDrive >= 18) {
+  console.log('You can drive.');
+} else if (ageDrive >= 14) {
+  console.log('Almost there!');
+}
+ else {
+  console.log('You can not drive');
+}
+
+
+// Marriage proposal
+let marriageProposal = 'yes';
+if (marriageProposal === 'yes') {
+  console.log(`She said ${marriageProposal}. I will marry her`);
+} else if (marriageProposal === 'no') {
+  console.log(`She said ${marriageProposal}. I will break up with her`);
+} else {
+  console.log(`Let's continue current relationship.`);
+}
+// logical operators &&, ||
+let randomNumber = 1;
+
+
+if (randomNumber > 0 && randomNumber < 2) {
+  console.log('200');
+} else {
+  console.log('404');
+}
+
+
+// Election
+let randomVariable = 'Let\'s make America great again!';
+if (randomVariable === 'Trump' ||  randomVariable === 'Let\'s make America great again!') {
+  console.log('Go!');
+} else if (randomVariable === 'Biden' || randomVariable === 'Chocolate Ice cream') {
+  console.log('You are Bidenist!')
+}
+else {
+  console.log('You do not have interest in politics!');
+}
+
 // Hour of the day
 
-let hour = 10;
-
-const userName = 'Abdulboriy';
-
-if (hour >= 6 && hour < 13 ) {
-  console.log('Good morning, ' + userName + '!');
-  alert('Good morning, ' + userName + '!');
-} else if ( hour >=13 && hour < 18) {
-  console.log('Good afternoon, ' + userName + '!');
-  alert('Good afternoon, ' + userName + '!');
-} else {
-  console.log('Good night,' + userName + '!');
-  alert('Good night, ' + userName + '!');
+let hourOftheDay = 19;
+if (hourOftheDay > 6 && hourOftheDay < 13) {
+  console.log('Good morning!');
+} else if (hourOftheDay > 13 && hourOftheDay < 16) {
+  console.log('Good afternoon!');
+} else if (hourOftheDay > 16 && hourOftheDay < 22) {
+  console.log('Good evening!');
+} else if (hourOftheDay > 22 || hourOftheDay < 6) {
+  console.log('Good night!');
 }
 
 
-// Discount age checker with '||' logical operator
+// Park
+age = 4;
+isHoliday = true;
 
-let discountAge = 4;
-const isHoliday = false;
-
-if (discountAge > 65 || discountAge < 6 && !isHoliday) {
-  console.log('You get 50% discount!');
-  alert('You get 50% discount');
+if (age > 65 || age < 6 && !isHoliday) {
+  console.log('You get discount!');
 } else {
-  console.log('You do not get any discount');
-  alert('You do not get any discount!');
+  console.log('You do not get discount!');
 }
 
 
-// Flipping card
 
-let randomCoin = Math.random();
-let result = '';
-let guess = 'Heads';
-
-
-
-
-if (randomCoin < 0.5) {
-  result = 'Heads';
+// heads and tails
+random = Math.random();
+result = random;
+guess = 'Tails';
+if (result < 0.5) {
+  console.log(result = 'Heads');
 } else {
-  result = 'Tails';
+  console.log(result = 'Tails');
 }
 if (guess === result) {
-  result = 'You win!';
+  console.log('You win.');
 } else {
-  result = 'You lost!';
-
+  console.log('You lost');
 }
-document.write(result);
 
-
-//ternary operator version of flipping card
-
-let randomCoin = Math.random();
-let guess = 'Heads';
-
-let result = randomCoin < 0.5 ? 'Heads' : 'Tails';
-
-result = guess === result ? 'You win!' : 'You lost!';
-
-document.write(result);
+// All comments related to code are here:
+// in the 2nd line I tried to compare to different values which are basically true but one is string, other is number;
+// it gave back false since i used '='
+// it needs to be double '=='
+//  logical operators: &&
+// logical operators: ||
