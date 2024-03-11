@@ -43,3 +43,31 @@ function convertTemperature(degrees, unit) {
 }
 convertTemperature(25, 'C');
 convertTemperature(93, 'F');
+
+
+
+// convertMoney
+
+function convertToWon(Dollar) {
+  console.log(`${Dollar} USD is equal to ${Dollar * 1315} won.`)
+};
+convertToWon(30);
+
+function convertToDollar(Won) {
+  console.log(`${Won} KRW is equal to ${Won * 0.00076} dollar. `)
+}
+convertToDollar(1000);
+
+function convertMoney(currency) {
+  if (currency === '$') {
+    function convertToWon(Dollar) {
+      console.log(`${Dollar} USD is equal to ${Dollar * 1315} won.`)
+    };
+  } else if (currency === '₩') {
+    function convertToDollar(Won) {
+      console.log(`${Won} KRW is equal to ${Won * 0.00076} dollar. `)
+  };
+}
+  }
+  convertToWon(20);
+  convertToDollar(35000);
