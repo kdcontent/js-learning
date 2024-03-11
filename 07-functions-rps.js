@@ -42,7 +42,10 @@
         result = 'Tie.'
       }
     }
-      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`)
+
+
+
+      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}.`)
 
 
       }

@@ -40,6 +40,8 @@ let soccerPlayer3 = {
   }
 }
 
+
+
 soccerPlayer1.club = 'Manchester United'; // -> we can property outside of object
 soccerPlayer0.ballondors = 8;
 soccerPlayer1.ballondors = 5;
