@@ -1,4 +1,11 @@
-const score = JSON.parse(localStorage.getItem('score'));
+let score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  loses: 0,
+  ties: 0
+};
+
+
+
 
 function pickComputerMove () {
   const randomNumber = Math.random();
