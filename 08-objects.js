@@ -1,3 +1,4 @@
+/*
 let soccerPlayer0 = {
 name: 'Messi',
 club: 'Inter Miami',
@@ -60,7 +61,55 @@ soccerPlayer1.fun();
 soccerPlayer3.fun();
 
 console.log(JSON.stringify(soccerPlayer0));
+*/
+console.log('Messi'.length);
+console.log('Messi'.toLowerCase());
 
+
+const player = {
+  namePlayer: 'Lionel Messi'
+};
+
+
+const { namePlayer } = player;
+console.log(namePlayer);
+// Here, property name and variable name should be same
+
+
+const basketballProduct = {
+  name: 'Basketball',
+  price: '2095',
+  size: 'Large'
+}
+console.log(basketballProduct);
+
+basketballProduct.price = 2950;
+console.log(basketballProduct.price);
+
+basketballProduct['delivery time'] ='3 days';
+
+// Compare products
+let player1 = {
+  namePlayer: 'Lionel Messi',
+  goals: '825',
+  ballondors: '8'
+}
+let player2 = {
+  namePlayer: 'Cristiano Ronaldo',
+  goals: '877',
+  ballondors: '5'
+}
+function comparePlayer() {
+  if (player1.goals > player2.goals) {
+    console.log(`${player1.namePlayer} has more goals than ${player2.namePlayer}`);
+  } else if (player2.goals > player1.goals) {
+    console.log(`${player2.namePlayer} has more goals than ${player1.namePlayer}`);
+  }
+}
+comparePlayer();
+
+
+// compare product
 
 
 // Instead of creating bunch of variables, we can add all of them to one object and use it where we want;
