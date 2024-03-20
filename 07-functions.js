@@ -71,3 +71,6 @@ function convertMoney(currency) {
   }
   convertToWon(20);
   convertToDollar(35000);
+
+
+  // day of the year
