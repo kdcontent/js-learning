@@ -108,9 +108,88 @@ function comparePlayer() {
 }
 comparePlayer();
 
+// Artist
 
-// compare product
+let artist1 = {
+  artistName: 'Kendrick Lamar',
+  artistYear: '1987',
+  artistSongs: 'Fear, M.a.a.d city, Family Ties, Money Trees, Count me Out, N95, Rich spirit',
+  artistAwards: 'Grammy Award for Best Rap Album, Pulitzer Prize in Music',
+
+}
+console.log(artist1);
 
 
-// Instead of creating bunch of variables, we can add all of them to one object and use it where we want;
-// we [] notation instead of '.' notation when we can't access some properties with dot notation. For examples soccerPlayer.transfer-price;
+// Planets
+let planet0 = {
+  planetName: 'Mercury',
+  planetSize: '74,797,000 km2',
+  planetNumber: '1',
+  planetLife: 'false'
+}
+let planet1 = {
+  planetName: 'Earth',
+  planetSize: '510,100,000km²',
+  planetNumber: '3',
+  planetLife: true
+}
+let planet2 = {
+  planetName: 'Mars',
+  planetSize: '144,400,000km²',
+  planetNumber: '4',
+  planetLife: false
+}
+function isThereLife() {
+  if (planet0.planetLife === 'true') {
+    console.log( `There is life on ${planet0.planetName}!`);
+  } else if (planet0.planetLife === 'false') {
+    console.log(`There is no proof that there is life on ${planet0.planetName}`);
+  }
+}
+isThereLife();
+
+
+// isSameProduct
+
+let productOne = {
+  name: 'Banana',
+  price: '7$'
+}
+let productTwo = {
+  name: 'Apple',
+  price: '7$'
+}
+
+function isSameProduct() {
+  if (productOne.name === productTwo.name) {
+    console.log(true);
+  } else if (productOne.price === productTwo.price) {
+    console.log(false);
+  }
+}
+isSameProduct();
+
+// lowercase
+
+let text = 'Hello new world!';
+text = text.toLowerCase();
+console.log(text);
+
+let textZero = 'all the boys and girls!';
+textZero = textZero.toUpperCase();
+console.log(textZero);
+
+
+// repeat
+let repeatedZero = 'You Back Outside '
+repeatedZero = repeatedZero.repeat(2);
+console.log(repeatedZero);
+
+
+// flip Coin
+function playGame(guess){
+  const randomNumber = Math.random();
+  const result = randomNumber < 0.5 ? 'Heads' : 'Tails';
+
+  console.log(guess === result ? 'You win!' : 'You lose!');
+  }
