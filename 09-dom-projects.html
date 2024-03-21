@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM projects</title>
+</head>
+<body>
+<p>Youtube subscribe button</p>
+<button onclick="
+  isSubscribe();
+" class="js-subscribe-button">Subscribe</button>
+
+
+<!-- Amazon Calculator -->
+<p>Amazon Shipping Calculator</p>
+<p>Orders under $40 = +$10 shipping</p>
+<p>Orders over $40=FREE shipping</p>
+
+<input type="text" placeholder="Cost of order" id="js-input" onkeydown="
+handleCost();
+
+">
+<button onclick="
+  calculateTotal();
+">Calculate</button>
+<p class="js-total-cost"></p>
+
+<!-- Button -->
+<button class="js-button-nine">9a</button>
+<button class="js-button-nineb">9b</button>
+
+
+<!-- heads and tails -->
+<button onclick="
+document.querySelector('.js-coin-result').innerHTML = 'You chose Heads!'
+" class="js-heads">Heads</button>
+<button onclick="
+document.querySelector('.js-coin-result').innerHTML = 'You chose Tails!'
+" class="js-tails">Tails</button>
+<p class="js-coin-result"></p>
+
+
+<!-- input -->
+<input type="text" class="name-input" placeholder="Your Name" onkeydown="
+if (event.key === 'Enter') {
+  const name = document.querySelector('.name-input').value;
+  document.querySelector('.js-input-text').innerHTML = `Your name is ${name}`;
+}
+">
+<button onclick="
+nameOutPut();
+">Submit</button>
+<p class="js-input-text"></p>
+
+
+<!-- Calculator -->
+<p>Calculator</p>
+
+<input type="text" placeholder="Cost of order" id="js-calculate" onkeydown="
+calculate();
+
+">
+<button onclick="
+  calculateZero();
+">Calculate</button>
+<p class="js-total"></p>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="09-dom-projects.js">
+
+  </script>
+</body>
+</html>
