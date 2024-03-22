@@ -193,3 +193,35 @@ function playGame(guess){
 
   console.log(guess === result ? 'You win!' : 'You lose!');
   }
+
+
+  // ternary operators
+let age = 16;
+let permission = age >= 18 ? "You are permitted to enter" : "You are not permitted to enter!";
+console.log(permission);
+
+
+let user = {
+  name: 'John',
+  student: true
+}
+
+let studentStatus = user.student ? true : false;
+console.log(studentStatus);
+
+
+let city = {
+  nameCity: 'New York',
+  subwayAvailable: true
+}
+let subwayStatus = city.subwayAvailable ? true : false;
+console.log(subwayStatus);
+
+
+// return
+
+function add(x, y) {
+  return x / y;
+}
+ let result = add(125, 5);
+ console.log(result);
