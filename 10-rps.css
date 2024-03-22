@@ -1,0 +1,37 @@
+body {
+  background-color: #191919;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.button-img {
+  height: 50px;
+
+
+}
+.rps-button {
+  background-color: transparent;
+  border: 3px solid #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.reset-button {
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 7px 12px;
+}
