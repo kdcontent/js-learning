@@ -68,14 +68,37 @@ calculate();
 
 
 
+<!-- Cart quantity -->
 
+<button onclick="
+  updateCartQuantity();
+">Show Quantity</button>
+<button onclick="
+  updateCartQuantity(1);
+">Add to Cart</button>
 
+<button onclick="
+  updateCartQuantity(2);
+">+2</button>
+<button onclick="
+  updateCartQuantity(3);
+">+3</button>
 
+<button onclick="
+  updateCartQuantity(-1);
+">-1</button>
 
+<button onclick="
+  updateCartQuantity(-2);
+">-2</button>
+<button onclick="
+  updateCartQuantity(-3);
+">-3</button>
+<button onclick="
+  resetCartQuantity();
+">Reset Cart Quantity</button>
 
-
-
-
+<p class="js-cart-quantity"></p>
   <script src="09-dom-projects.js">
 
   </script>

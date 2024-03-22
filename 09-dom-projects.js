@@ -58,3 +58,19 @@ if (cost < 4000) {
 document.querySelector('.js-total').innerHTML = `$${cost / 100}` // back to dollar
 
 }
+
+
+// cart quantity
+
+let cartQuantity = 0;
+
+function updateCartQuantity(change) {
+  cartQuantity += change;
+  document.querySelector('.js-cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+
+}
+function resetCartQuantity() {
+  cartQuantity = 0;
+  document.querySelector('.js-cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+}
+document.querySelector('.js-cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
