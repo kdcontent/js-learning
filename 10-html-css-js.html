@@ -33,9 +33,97 @@
   <p class="js-total-cost"></p>
 
 
+<!-- Turn on/off -->
+<button onclick="
+  switchButtonZero();
+" class="switch-button js-switch-button">Switch</button>
 
+<!-- three buttons -->
+<button onclick="
+  isThreeButton('.js-button-zero');
+" class="three-button js-button-zero">Music</button>
 
+<button onclick="
+  isThreeButton('.js-button-one');
+" class="three-button js-button-one">Tech</button>
 
-  <script src="10-html-css-js.js"></script>
+<button onclick="
+  isThreeButton('.js-button-two');
+" class="three-button js-button-two">Soccer</button>
+
+<!-- Calculator -->
+<p class="js-calculator calculator"></p>
+<p>
+  <button onclick="
+  calculate(1);
+  " class="button-number">1</button>
+  <button onclick="
+    calculate(2);
+  " class="button-number">2</button>
+  <button onclick="
+  calculate(3);
+  " class="button-number">3</button>
+  <button onclick="
+  calculate('+');
+  " class="button-sign">+</button>
+</p>
+<p>
+  <button onclick="
+    calculate(4);
+  " class="button-number">4</button>
+  <button onclick="
+    calculate(5);
+  " class="button-number">5</button>
+  <button onclick="
+    calculate(5);
+  " class="button-number">6</button>
+  <button onclick="
+  calculate('-');
+  " class="button-sign">-</button>
+</p>
+
+<p>
+  <button onclick="
+  calculate(7);
+  " class="button-number">7</button>
+  <button onclick="
+  calculate(8);
+  " class="button-number">8</button>
+  <button onclick="
+  calculate(9);
+  " class="button-number">9</button>
+  <button onclick="
+  calculate('*');
+  " class="button-sign">*</button>
+</p>
+<p>
+  <button onclick="
+  calculate(0);
+  " class="button-number">0</button>
+  <button onclick="
+  calculate('.');
+  " class="button-number">.</button>
+  <button onclick="
+  calculator = eval(calculator);
+
+  setCalculator();
+
+          localStorage.setItem('calculation', calculation);
+    " class="button-number">=</button>
+
+  <button onclick="
+  calculate('/');
+  " class="button-sign">/</button>
+
+</p>
+<button onclick="
+calculator = '';
+
+setCalculator();
+localStorage.setItem('calculate', calculator);
+
+" class="button-number">Clear</button>
+
+<script src="10-html-css-js.js"></script>
 </body>
 </html>
