@@ -228,11 +228,6 @@ console.log(countFruits(['apple', 'banana', 'apple', 'apricot', 'lemon', 'mandar
 
 
 
-
-
-
-
-
 // return
 function getResult(goals, assists) {
   return(goals / assists);
@@ -264,3 +259,109 @@ function ageRestriction(age) {
 }
 let z = ageRestriction(16);
 console.log(z);
+
+
+// search
+let strings = ['hello', 'new', 'world', 'search', 'engine'];
+
+let index = -1;
+
+for (i = 0; i < strings.length; i++) {
+  if (strings[i] === 'search') {
+    index = i;
+  }
+  console.log(index);
+}
+
+let words = ['not', 'found'];
+
+let indexZero = -1;
+
+for (i = 0; i < words.length; i++) {
+  if (words[i] === 'search') {
+    indexZero = i;
+  }
+  console.log(indexZero);
+}
+
+// break search
+
+let wordsZero = ['hello', 'new', 'world', 'search', 'engine', 'search'];
+
+let indexOne = -1;
+
+for (i = 0; i < wordsZero.length; i++) {
+  if (wordsZero[i] === 'search') {
+    indexOne = i;
+    break;
+  }
+  console.log(indexOne);
+}
+console.log(indexOne);
+
+
+// function
+function findArtist(array, artistName) {
+
+let indexArtist = -1;
+
+for (i = 0; i < artistName.length; i++) {
+  if (artistName === array[i]) {
+    indexArtist = i;
+    break;
+  }
+
+}
+
+return indexArtist;
+
+
+}
+console.log(findArtist(['Kendrick Lamar', 'Eazy-E', 'Eminem', 'NF'], 'Snoop'));
+
+
+
+// remove food
+function removeFood(food){
+
+const result = [];
+for (i = 0; i < food.length; i++) {
+  if (food[i] === 'egg') {
+    continue;
+  }
+  result.push(food[i]);
+}
+return result;
+}
+console.log(removeFood(['egg', 'apple', 'banana', 'egg', 'rice', 'lemon']));
+//
+
+function removeFood(food){
+
+  const result = [];
+  let removedEggs = 0;
+  for (i = 0; i < food.length; i++) {
+    if (food[i] === 'egg' && removedEggs < 2) {
+      removedEggs++
+      continue;
+    }
+    result.push(food[i]);
+  }
+  return result;
+  }
+  console.log(removeFood(['egg', 'apple', 'banana', 'egg', 'rice', 'lemon', 'egg']));
+
+  // FizzBuzzz
+ for (i = 0; i <= 20; i++) {
+  if (i % 3 === 0 && i % 5 ===0) {
+    console.log('FizzBuzz');
+  }
+  else if (i % 3 === 0) {
+    console.log('Fizz')
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
+  }
+   else (
+    console.log(i)
+  )
+ }
