@@ -1,32 +1,63 @@
-const todoList = [];
+const toDolist = JSON.parse(localStorage.getItem('toDoList')) || [{
+  taskName: 'play soccer',
+  taskDueDate: '2024-05-10'
+},
+{
+  taskName: 'do homework',
+  taskDueDate: '2024-05-10'
+}];
 
-todoListZero();
+renderToDoList();
+function renderToDoList() {
+let todolistHTML = '';
+
+for (let i = 0; i < toDolist.length; i++) {
+const todoObject = toDolist[i];
+
+const { taskName, taskDueDate } = todoObject;  // -> destructuring
 
 
-function todoListZero() {
 
+const htmlCode = `
+<div>${taskName}</div>
+<div>${taskDueDate}</div>
+<button onclick="
+  toDolist.splice(${i}, 1);
+  renderToDoList();
 
-let toDoListHTML = '';
-
-for (y = 0; y < todoList.length; y++) {
-const todo = todoList[y];
-const html =`<p>${todo}</p>`;
-
-toDoListHTML += html;
+  saveStorage();
+" class="delete-button">Delete</button>
+`
+todolistHTML += htmlCode;
 }
-console.log(toDoListHTML);
+console.log(todolistHTML);
 
-document.querySelector('.js-todo-class').innerHTML = toDoListHTML;
+
+document.querySelector('.js-div').innerHTML = todolistHTML;
+
 }
-
 function addTodo() {
-const inputElement = document.querySelector('.js-input');
-const nameValue = inputElement.value;
+  const input = document.querySelector('.js-input');
+  const valueName = input.value;
 
-todoList.push(nameValue);
-console.log(todoList);
+  const dateInput = document.querySelector('.js-date-input');
+  const dateValue = dateInput.value;
 
 
-inputElement.value = '';
-todoListZero();
+  toDolist.push({
+    taskName: valueName,
+    taskDueDate: dateValue,
+  });
+
+  console.log(toDolist);
+
+  input.value = '';
+
+  renderToDoList();
+
+  saveStorage();
+}
+
+function saveStorage() {
+  localStorage.setItem('toDoList', JSON.stringify(toDolist));
 }

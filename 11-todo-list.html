@@ -4,17 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo list</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="11-todo-list.css">
 </head>
 <body>
 
-  <p>Todo list</p>
-  <input type="text" placeholder="Todo name" class="js-input">
+<p>Todo list</p>
+<div class="todo-input-grid">
+<input type="text" placeholder="Todo name" class="js-input name-input">
+<input type="date" class="js-date-input duedate-input">
 <button onclick="
-addTodo();
-">Add</button>
-<div class="js-todo-class"></div>
-<p class="todo-list"></p>
+  addTodo();
+" class="add-button">Add</button>
+</div>
+<div class="js-div todolist-grid">
+
+</div>
+
+<p class="output-value"></p>
 <script src="11-todo-list.js"></script>
 </body>
 </html>

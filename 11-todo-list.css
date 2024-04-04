@@ -1,0 +1,33 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+.todolist-grid, .todo-input-grid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+.todo-input-grid {
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+.name-input, .duedate-input {
+  font-size: 16px;
+  padding: 7px;
+}
+.add-button {
+  background-color: #1796eb;
+  border: none;
+  color: #fdfdfd;
+  cursor: pointer;
+
+}
+.delete-button {
+  background-color: #8B0000;
+  border: none;
+  color: #fdfdfd;
+  cursor: pointer;
+  padding: 7px;
+}
